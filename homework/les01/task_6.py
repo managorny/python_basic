@@ -10,10 +10,11 @@ try:
     b = float(input("Введите ожидаемое общее кол-во км\n"))
     total = a
     i = 1
-    print(f'{i}-й день: {total}')
+    print(f'Результат:\n{i}-й день: {total}')
     while total <= b:
         i += 1
         total = round(total + (total * 0.1), 2)
         print(f'{i}-й день: {total}')
+    print(f'Ответ: на {i}-й день спортсмен достиг результата — не менее {b} км.')
 except ValueError:
     print("Возможно вы вводите не числа")
