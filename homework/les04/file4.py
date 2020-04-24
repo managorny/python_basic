@@ -7,14 +7,13 @@
 
 from itertools import repeat
 
-# TODO доделать
-
 my_list = [1, 2, 3, 4, 5, 6, 4, 4, 5]
 new_list = []
-for i in range(len(my_list) - 1):
-    for k in range(i + 1, len(my_list)):
-        if my_list[i] == my_list[k]:
-            break
-        else:
-            new_list.append(my_list[k])
+for i in my_list:
+    j = 0
+    for k in my_list:
+        if i == k:
+            j += 1
+    if j <= 1:
+        new_list.append(i)
 print(new_list)

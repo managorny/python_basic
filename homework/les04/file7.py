@@ -6,21 +6,19 @@
 Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
 
-# TODO доделать
+
 def fibo_gen(x):
-    for i in range(x + 1):
-        d = i-1 * i
-        return d
+    n = 1
+    for i in range(1, x):
+        n = (i + 1) * n
+        yield n
 
 
-print(fibo_gen(10))
-
-# for el in q:
-#     print(el)
-# i = 0
-# for el in fibo_gen(20):
-#     if i <= 15:
-#         print(el)
-#         i += 1
-#     else:
-#         break
+k = 1
+for el in fibo_gen(100):
+    if k <= 15:
+        print(f'{i}. {el}')
+        k += 1
+    else:
+        print("Выведено максимум 15 чисел")
+        break
