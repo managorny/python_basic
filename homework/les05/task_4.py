@@ -26,8 +26,8 @@ with open('task_4.txt', 'r') as file:
             x[0] = 'Три'
         elif x[0] == "Four":
             x[0] = 'Четыре'
-        with open('file_2.txt', 'a') as file2:
+        with open('task_4_2.txt', 'a') as file2:
             file2.write(f'{x[0]} - {x[1]}')
 
-with open('file_2.txt', 'r') as file2:
+with open('task_4_2.txt', 'r') as file2:
     print(file2.read())
